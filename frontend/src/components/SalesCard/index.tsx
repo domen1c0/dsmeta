@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import { Sale } from '../../models/sale'
 import { BASE_URL } from '../../utils/request'
 import NotificationButton from '../NotificationButton'
+import DeleteButton from '../DeleteButton'
 import './styles.css'
 
 function SalesCard() {
@@ -62,6 +63,7 @@ function SalesCard() {
               <th className="show992">Vendas</th>
               <th>Total</th>
               <th>Notificar</th>
+              <th>Deletar</th>
             </tr>
           </thead>
 
@@ -81,6 +83,13 @@ function SalesCard() {
                     <div className="dsmeta-red-btn-container">
                       <div className="dsmeta-red-btn">
                         <NotificationButton saleId={sale.id}></NotificationButton>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="dsmeta-delete-btn-container">
+                      <div className="dsmeta-delete-btn">
+                        <DeleteButton saleId={sale.id}></DeleteButton>
                       </div>
                     </div>
                   </td>
